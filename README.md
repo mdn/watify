@@ -1,19 +1,24 @@
-# watify
+# Watify
 
 Compile WAT to WASM with WASM 🙇
 
----
+## Requirements
+
+To build, install the rust toolchain and `wasm-pack`.
 
 ## Running
 
 ```bash
-# optional: install wasm-pack if not already installed
+# Optional: install wasm-pack if not already installed
 cargo install wasm-pack
 
 # build
 wasm-pack build --release --target web
 
-#serve
+# Serve this directory for testing. (python server used in the example, 
+# but any web server will do).
+# This will server the index.html file in the root of the directory.
+# There will only be output in the console if you load the page.
 python3 -m http.server
 ```
 

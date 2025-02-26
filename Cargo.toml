@@ -1,9 +1,16 @@
 [package]
 name = "watify"
-version = "0.0.1"
+version = "1.0.0"
+license = "MPL-2.0"
+authors = [
+  "Florian Dieminger <me@fiji-flo.de>",
+  "The MDN Engineering Team <mdn-dev@mozilla.com>",
+]
 edition = "2021"
 resolver = "2"
-license = "MIT"
+homepage = "https://github.com/mdn/watify"
+repository = "https://github.com/mdn/watify"
+rust-version = "1.81"
 
 [lib]
 crate-type = ["cdylib"]

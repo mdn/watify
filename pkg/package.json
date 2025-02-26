@@ -1,0 +1,16 @@
+{
+  "name": "watify",
+  "version": "1.0.0",
+  "license": "MPL-2.0",
+  "files": [
+    "watify_bg.wasm",
+    "watify.js",
+    "watify_bg.js",
+    "watify.d.ts"
+  ],
+  "module": "watify.js",
+  "types": "watify.d.ts",
+  "sideEffects": [
+    "./watify.js"
+  ]
+}
