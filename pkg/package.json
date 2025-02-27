@@ -1,5 +1,5 @@
 {
-  "name": "watify",
+  "name": "@mdn/watify",
   "type": "module",
   "collaborators": [
     "Florian Dieminger <me@fiji-flo.de>",
