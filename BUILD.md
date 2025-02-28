@@ -2,7 +2,7 @@
 
 ## Requirements
 
-To build, install the rust toolchain and `wasm-pack`.
+To build, a working rust toolchain and `wasm-pack` are needed.
 
 ## Build
 
@@ -10,7 +10,7 @@ To build, install the rust toolchain and `wasm-pack`.
 # Optional: install wasm-pack if not already installed
 cargo install wasm-pack
 
-# build
+# use wasm-pack to build artifact
 wasm-pack build --release --target web
 ```
 
