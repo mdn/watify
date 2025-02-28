@@ -16,13 +16,16 @@ jobs:
   test-run:
     runs-on: ubuntu-latest
     steps:
-      - name: Setup
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - uses: dtolnay/rust-toolchain@stable
-      - run: cargo install wasm-pack && wasm-pack build --release --target web
+      - name: Setup rust
+        uses: dtolnay/rust-toolchain@stable
 
-      - name: Checkout
+      - name: Build
+        run: cargo install wasm-pack && wasm-pack build --release --target web
+
+      - name: Setup node
         uses: actions/setup-node@v4
         with:
           registry-url: "https://registry.npmjs.org/"
