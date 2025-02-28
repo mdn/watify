@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/mdn/watify/compare/v1.0.2...v1.1.0) (2025-02-28)
+
+
+### Features
+
+* more actions ([#7](https://github.com/mdn/watify/issues/7)) ([7caba52](https://github.com/mdn/watify/commit/7caba529eb5318f5396644d0497bc2a66c1cc5fe))
+
 ## [1.0.2](https://github.com/mdn/watify/compare/v1.0.1...v1.0.2) (2025-02-28)
 
 
