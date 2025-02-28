@@ -4,7 +4,7 @@ Compile WAT to WASM with WASM 🙇
 
 ## Usage
 
-For local testing, build the package, then server the project root 
+For local testing, build the package, then server the project root
 by running an http server. THe `index.html` file has this example.
 The output can be seen in the browser's console.
 
