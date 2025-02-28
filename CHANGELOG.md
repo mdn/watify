@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.2](https://github.com/mdn/watify/compare/v1.1.1...v1.1.2) (2025-02-28)
+
+
+### Bug Fixes
+
+* actions ([#12](https://github.com/mdn/watify/issues/12)) ([a39cfa3](https://github.com/mdn/watify/commit/a39cfa35f25fdd9b55777bc01980aa2a54b10370))
+
 ## [1.1.1](https://github.com/mdn/watify/compare/v1.1.0...v1.1.1) (2025-02-28)
 
 
