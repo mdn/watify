@@ -1,4 +1,4 @@
-# watify
+# Watify
 
 Compile WAT to WASM with WASM 🙇
 
