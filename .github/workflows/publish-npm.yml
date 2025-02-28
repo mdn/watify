@@ -1,0 +1,29 @@
+name: publish-npm
+
+on:
+  workflow_run:
+    workflows: [build]
+    types: [completed]
+
+# No GITHUB_TOKEN permissions, as we only use it to increase API limit.
+permissions: {}
+
+jobs:
+  on-success:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    steps:
+      - name: Setup
+        uses: actions/checkout@v4
+
+      - name: Checkout
+        uses: actions/setup-node@v4
+        with:
+          registry-url: "https://registry.npmjs.org/"
+          node-version-file: "./pkg/package.json"
+
+      - name: Publish
+        working-directory: ./pkg
+        run: npm publish --access public --dry-run
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
