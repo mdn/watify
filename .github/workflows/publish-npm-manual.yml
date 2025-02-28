@@ -19,6 +19,9 @@ jobs:
       - name: Setup
         uses: actions/checkout@v4
 
+      - uses: dtolnay/rust-toolchain@stable
+      - run: cargo install wasm-pack && wasm-pack build --release --target web
+
       - name: Checkout
         uses: actions/setup-node@v4
         with:

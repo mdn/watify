@@ -13,10 +13,13 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
-      - name: Setup
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Checkout
+      - uses: dtolnay/rust-toolchain@stable
+      - run: cargo install wasm-pack && wasm-pack build --release --target web
+
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
           registry-url: "https://registry.npmjs.org/"
