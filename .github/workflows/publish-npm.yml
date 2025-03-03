@@ -20,7 +20,7 @@ jobs:
         uses: dtolnay/rust-toolchain@stable
 
       - name: Build
-        run: cargo install wasm-pack && wasm-pack build --release --target web
+        run: cargo install wasm-pack && wasm-pack build --release --target web --scope mdn
 
       - name: Setup Node
         uses: actions/setup-node@v4
