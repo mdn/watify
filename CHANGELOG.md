@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.3](https://github.com/mdn/watify/compare/v1.1.2...v1.1.3) (2025-03-03)
+
+
+### Bug Fixes
+
+* package name ([066d93a](https://github.com/mdn/watify/commit/066d93aa4bf68bc742366e430fb6b7e74c3a793b))
+* publish with scope ([2abf2b2](https://github.com/mdn/watify/commit/2abf2b2175b7ebf1412660dc681c6cead33c3b55))
+
 ## [1.1.2](https://github.com/mdn/watify/compare/v1.1.1...v1.1.2) (2025-02-28)
 
 
