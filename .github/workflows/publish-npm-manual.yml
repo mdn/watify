@@ -28,7 +28,7 @@ jobs:
         run: cargo install wasm-pack && wasm-pack build --release --target web --scope mdn
 
       - name: Setup node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           registry-url: "https://registry.npmjs.org/"
           node-version-file: "./pkg/package.json"
