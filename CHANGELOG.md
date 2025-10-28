@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.4](https://github.com/mdn/watify/compare/v1.1.3...v1.1.4) (2025-10-28)
+
+
+### Bug Fixes
+
+* add codeowners ([e73fc9c](https://github.com/mdn/watify/commit/e73fc9cf65c20f12d0041fec23247c511c77e578))
+
 ## [1.1.3](https://github.com/mdn/watify/compare/v1.1.2...v1.1.3) (2025-03-03)
 
 
