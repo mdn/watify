@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.1.5](https://github.com/mdn/watify/compare/v1.1.4...v1.1.5) (2025-10-30)
+
+
+### Miscellaneous
+
+* **deps:** bump wasm-bindgen from 0.2.100 to 0.2.104 ([#25](https://github.com/mdn/watify/issues/25)) ([1bb6813](https://github.com/mdn/watify/commit/1bb6813a3deea42c1fa17628a7937f85671177e1))
+* **deps:** bump wat from 1.226.0 to 1.240.0 ([#29](https://github.com/mdn/watify/issues/29)) ([aca277e](https://github.com/mdn/watify/commit/aca277e7ea13c7fc9e9768c8ef1c30e592ce84e1))
+* **github:** add PR template ([#41](https://github.com/mdn/watify/issues/41)) ([abac55b](https://github.com/mdn/watify/commit/abac55b7110f0a2d1095c5649eae1db2e60445f8))
+* **npm:** migrate to Trusted Publishing ([#39](https://github.com/mdn/watify/issues/39)) ([3f48238](https://github.com/mdn/watify/commit/3f48238dc8f96ec5f53177d80308154815b5a826))
+* **release-please:** configure changelog sections ([#40](https://github.com/mdn/watify/issues/40)) ([1cb453a](https://github.com/mdn/watify/commit/1cb453a489b4f1327d7e5737b9dee606efcf4b1c))
+* update authors ([#42](https://github.com/mdn/watify/issues/42)) ([0494dba](https://github.com/mdn/watify/commit/0494dba8a57cbe1909868764460225e50b6a8018))
+
 ## [1.1.4](https://github.com/mdn/watify/compare/v1.1.3...v1.1.4) (2025-10-28)
 
 
