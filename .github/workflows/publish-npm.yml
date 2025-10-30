@@ -31,10 +31,6 @@ jobs:
           node-version-file: ".nvmrc"
           package-manager-cache: false
 
-      # Ensure npm 11.5.1 or later for trusted publishing
-      - name: Install latest npm
-        run: npm install -g npm@latest
-
       - name: Publish
         working-directory: ./pkg
         run: npm publish --access public --provenance
