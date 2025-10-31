@@ -19,19 +19,26 @@ jobs:
       RUSTC_WRAPPER: "sccache"
 
     steps:
-      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+      - name: Checkout
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
         with:
           persist-credentials: false
-      - uses: dtolnay/rust-toolchain@38b70195107dddab2c7bbd522bcf763bac00963b # stable
-      - name: sccache-cache
+
+      - name: Setup rust
+        uses: dtolnay/rust-toolchain@38b70195107dddab2c7bbd522bcf763bac00963b # stable
+
+      - name: Setup sccache
         uses: mozilla-actions/sccache-action@7d986dd989559c6ecdb630a3fd2557667be217ad # v0.0.9
 
       - name: Run fmt
         run: cargo fmt -- --check
+
       - name: Build
         run: cargo build --verbose
+
       - name: Run tests
         run: cargo test --verbose --workspace --all-targets --no-fail-fast
+
       - name: Run clippy
         run: cargo clippy --all-features --workspace -- -Dwarnings
 
@@ -46,7 +53,10 @@ jobs:
       - name: Setup rust
         uses: dtolnay/rust-toolchain@5d458579430fc14a04a08a1e7d3694f545e91ce6 # stable
 
-      - name: Build
+      - name: Setup sccache
+        uses: mozilla-actions/sccache-action@7d986dd989559c6ecdb630a3fd2557667be217ad # v0.0.9
+
+      - name: Run wasm-pack
         run: cargo install wasm-pack && wasm-pack build --release --target web --scope mdn
 
       - name: Setup Node
