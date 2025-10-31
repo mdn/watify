@@ -2,9 +2,9 @@ name: lint-test-clippy
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
   pull_request:
-    branches: [main]
 
 # No GITHUB_TOKEN permissions, as we don't use it.
 permissions: {}
@@ -35,3 +35,32 @@ jobs:
         run: cargo test --verbose --workspace --all-targets --no-fail-fast
       - name: Run clippy
         run: cargo clippy --all-features --workspace -- -Dwarnings
+
+  npm-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+        with:
+          persist-credentials: false
+
+      - name: Setup rust
+        uses: dtolnay/rust-toolchain@5d458579430fc14a04a08a1e7d3694f545e91ce6 # stable
+
+      - name: Build
+        run: cargo install wasm-pack && wasm-pack build --release --target web --scope mdn
+
+      - name: Setup Node
+        uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 # v6.0.0
+        with:
+          registry-url: "https://registry.npmjs.org/"
+          node-version-file: ".nvmrc"
+          package-manager-cache: false
+
+      - name: Bump version (prerelease)
+        working-directory: ./pkg
+        run: npm version prerelease
+
+      - name: Publish (dry-run)
+        working-directory: ./pkg
+        run: npm publish --dry-run --access public --provenance
