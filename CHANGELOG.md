@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.6](https://github.com/mdn/watify/compare/v1.1.5...v1.1.6) (2025-10-31)
+
+
+### Bug Fixes
+
+* **npm:** publish with Node v24 ([#44](https://github.com/mdn/watify/issues/44)) ([408119c](https://github.com/mdn/watify/commit/408119ce74bebdca52cf51f7094405d19922d355))
+
 ## [1.1.5](https://github.com/mdn/watify/compare/v1.1.4...v1.1.5) (2025-10-30)
 
 
