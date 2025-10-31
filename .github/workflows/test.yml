@@ -66,9 +66,9 @@ jobs:
           node-version-file: ".nvmrc"
           package-manager-cache: false
 
-      - name: Bump version (prerelease)
+      - name: Bump version
         working-directory: ./pkg
-        run: npm version prerelease
+        run: npm version patch
 
       - name: Publish (dry-run)
         working-directory: ./pkg
