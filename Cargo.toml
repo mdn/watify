@@ -8,7 +8,7 @@ edition = "2021"
 resolver = "2"
 homepage = "https://github.com/mdn/watify"
 repository = "git+https://github.com/mdn/watify.git"
-rust-version = "1.81"
+rust-version = "1.90"
 
 [lib]
 crate-type = ["cdylib"]
