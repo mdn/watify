@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.1.6](https://github.com/mdn/watify/compare/v1.1.5...v1.1.6) (2025-11-12)
+
+
+### Bug Fixes
+
+* **npm:** publish with Node v24 ([#44](https://github.com/mdn/watify/issues/44)) ([408119c](https://github.com/mdn/watify/commit/408119ce74bebdca52cf51f7094405d19922d355))
+
+
+### Miscellaneous
+
+* **deps:** bump rust from 1.81 to 1.90 ([#47](https://github.com/mdn/watify/issues/47)) ([ffccf8e](https://github.com/mdn/watify/commit/ffccf8e8e58f7c2187194b99e80312885f438271))
+
 ## [1.1.5](https://github.com/mdn/watify/compare/v1.1.4...v1.1.5) (2025-10-30)
 
 
