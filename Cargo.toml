@@ -1,6 +1,6 @@
 [package]
 name = "watify"
-version = "1.1.6"
+version = "1.1.7"
 license = "MPL-2.0"
 description = "Compile WAT to WASM with WASM 🙇"
 authors = ["MDN Engineering Team <mdn-dev@mozilla.com>"]
