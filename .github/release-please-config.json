@@ -1,4 +1,5 @@
 {
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
   "bump-minor-pre-major": true,
   "bump-patch-for-minor-pre-major": true,
   "include-component-in-tag": false,
@@ -9,6 +10,7 @@
     { "type": "enhance", "section": "Enhancements", "hidden": false },
     { "type": "chore", "section": "Miscellaneous", "hidden": false }
   ],
+  "draft-pull-request": true,
   "packages": {
     ".": {
       "component": "watify",
