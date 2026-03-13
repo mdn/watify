@@ -68,6 +68,7 @@ jobs:
         with:
           registry-url: "https://registry.npmjs.org/"
           node-version-file: ".nvmrc"
+          check-latest: true
           package-manager-cache: false
 
       - name: Bump version (prerelease)
