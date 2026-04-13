@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.1.10](https://github.com/mdn/watify/compare/v1.1.9...v1.1.10) (2026-04-13)
+
+
+### Miscellaneous
+
+* **deps:** bump wasm-bindgen from 0.2.114 to 0.2.115 ([#73](https://github.com/mdn/watify/issues/73)) ([57a2633](https://github.com/mdn/watify/commit/57a2633b8875e2d24f90c246f704c4588f6985d6))
+* **deps:** bump wasm-bindgen from 0.2.115 to 0.2.117 ([#76](https://github.com/mdn/watify/issues/76)) ([c6273c1](https://github.com/mdn/watify/commit/c6273c14d0ecb4162ad1bd9cf89d5a2eaf7c41b1))
+* **deps:** bump wasm-bindgen from 0.2.117 to 0.2.118 ([#77](https://github.com/mdn/watify/issues/77)) ([49b2cd0](https://github.com/mdn/watify/commit/49b2cd042888347ea09b3264a3c5a00cdeab8222))
+* **deps:** bump wat from 1.245.1 to 1.246.2 ([#75](https://github.com/mdn/watify/issues/75)) ([034774f](https://github.com/mdn/watify/commit/034774f086dff30c2797041ac44b40f7baab640d))
+
 ## [1.1.9](https://github.com/mdn/watify/compare/v1.1.8...v1.1.9) (2026-03-04)
 
 
