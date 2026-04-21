@@ -1,0 +1,13 @@
+[package]
+name = "watify-tools"
+version = "0.0.0"
+edition = "2024"
+publish = false
+rust-version = "1.90"
+
+# Purpose: track the pinned version of the `wasm-pack` CLI for Dependabot.
+# This package is intentionally not added to the root workspace; `cargo build`
+# and `cargo test` at the repo root do not compile it.
+
+[dependencies]
+wasm-pack = "=0.14.0"
