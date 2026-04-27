@@ -9,6 +9,7 @@ resolver = "2"
 homepage = "https://github.com/mdn/watify"
 repository = "git+https://github.com/mdn/watify.git"
 rust-version = "1.90"
+exclude = ["/tools"]
 
 [lib]
 crate-type = ["cdylib"]

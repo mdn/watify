@@ -7,8 +7,8 @@ To build, a working rust toolchain and `wasm-pack` are needed.
 ## Build
 
 ```bash
-# Optional: install wasm-pack if not already installed
-cargo install wasm-pack
+# Optional: install the pinned wasm-pack (version tracked in tools/Cargo.toml)
+cargo install wasm-pack --version "0.14.0" --locked
 
 # use wasm-pack to build artifact
 wasm-pack build --release --target web

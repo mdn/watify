@@ -60,8 +60,15 @@ jobs:
       - name: Setup sccache
         uses: mozilla-actions/sccache-action@7d986dd989559c6ecdb630a3fd2557667be217ad # v0.0.9
 
+      - name: Install wasm-pack
+        run: |
+          VERSION=$(cargo metadata --manifest-path tools/Cargo.toml --format-version 1 --no-deps \
+            | jq -r '.packages[0].dependencies[] | select(.name=="wasm-pack") | .req' \
+            | sed 's/^=//')
+          cargo install wasm-pack --version "$VERSION" --locked
+
       - name: Run wasm-pack
-        run: cargo install wasm-pack && wasm-pack build --release --target web --scope mdn
+        run: wasm-pack build --release --target web --scope mdn
 
       - name: Setup Node
         uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
