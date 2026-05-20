@@ -10,4 +10,4 @@ rust-version = "1.90"
 # and `cargo test` at the repo root do not compile it.
 
 [dependencies]
-wasm-pack = "=0.14.0"
+wasm-pack = "=0.15.0"
