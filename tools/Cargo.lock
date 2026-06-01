@@ -1802,9 +1802,9 @@ dependencies = [
 
 [[package]]
 name = "wasm-pack"
-version = "0.14.0"
+version = "0.15.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "85514fc651c557cd0d26b39ef72cfbdbdb490adf1a4abf1d33bf38b58db8f252"
+checksum = "a5368ae4d49229ac288eca4ea3a689fa554b3f205732f1dab3710839b73febb1"
 dependencies = [
  "anyhow",
  "binary-install",
