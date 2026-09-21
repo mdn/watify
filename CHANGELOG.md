@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.11](https://github.com/mdn/watify/compare/v1.1.10...v1.1.11) (2026-09-16)
+
+
+### Miscellaneous
+
+* **deps:** bump wat from 1.258.0 to 1.259.0 ([#115](https://github.com/mdn/watify/issues/115)) ([c3fe681](https://github.com/mdn/watify/commit/c3fe6817da568c82a43832129900f2e7e6fddabc))
+
 ## [1.1.10](https://github.com/mdn/watify/compare/v1.1.9...v1.1.10) (2026-09-09)
 
 
