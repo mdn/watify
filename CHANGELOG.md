@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.12](https://github.com/mdn/watify/compare/v1.1.11...v1.1.12) (2026-09-30)
+
+
+### Miscellaneous
+
+* **deps:** bump wasm-bindgen from 0.2.128 to 0.2.129 in the cargo group ([#118](https://github.com/mdn/watify/issues/118)) ([575a930](https://github.com/mdn/watify/commit/575a9302907a913392530578a2738fac719aafae))
+* **deps:** bump wasm-bindgen in the cargo group ([575a930](https://github.com/mdn/watify/commit/575a9302907a913392530578a2738fac719aafae))
+
 ## [1.1.11](https://github.com/mdn/watify/compare/v1.1.10...v1.1.11) (2026-09-16)
 
 
