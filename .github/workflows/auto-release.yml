@@ -1,0 +1,58 @@
+name: auto-release
+
+on:
+  schedule:
+    - cron: "0 9 * * 1" # Mondays 09:00 UTC
+  workflow_dispatch:
+    inputs:
+      dry-run:
+        description: "only report, don't merge"
+        required: false
+        default: false
+        type: boolean
+
+# No GITHUB_TOKEN permissions, as we don't use it.
+permissions: {}
+
+jobs:
+  auto-release:
+    if: github.repository == 'mdn/watify'
+    runs-on: ubuntu-latest
+    env:
+      # mdn-bot PAT: bypasses required reviews on main, and (unlike GITHUB_TOKEN)
+      # its merge triggers the release-please workflow on push.
+      GH_TOKEN: ${{ secrets.RELEASE_PLEASE_GITHUB_TOKEN }}
+      GH_REPO: ${{ github.repository }}
+    steps:
+      - name: Find eligible release PR
+        id: find
+        run: |
+          pr=$(gh pr list \
+            --head release-please--branches--main--components--watify \
+            --label "autorelease: pending" \
+            --state open \
+            --json number,body \
+            --jq '.[0]')
+          if [[ -z "$pr" ]]; then
+            echo "::notice::No pending release PR."
+            exit 0
+          fi
+          number=$(jq -r '.number' <<< "$pr")
+          if ! jq -r '.body' <<< "$pr" | grep -Eq 'bump (wat|wasm-bindgen) from'; then
+            echo "::notice::Release PR #$number has no wat/wasm-bindgen bump, skipping."
+            exit 0
+          fi
+          echo "Release PR #$number is eligible."
+          echo "number=$number" >> "$GITHUB_OUTPUT"
+
+      - name: Mark ready for review
+        if: steps.find.outputs.number && !inputs.dry-run
+        env:
+          PR: ${{ steps.find.outputs.number }}
+        run: gh pr ready "$PR"
+
+      - name: Enable auto-merge
+        if: steps.find.outputs.number && !inputs.dry-run
+        env:
+          PR: ${{ steps.find.outputs.number }}
+        run: gh pr merge "$PR" --auto --squash
