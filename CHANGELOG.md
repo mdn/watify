@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.1.12](https://github.com/mdn/watify/compare/v1.1.11...v1.1.12) (2026-10-07)
+
+
+### Miscellaneous
+
+* **deps:** bump wasm-bindgen from 0.2.128 to 0.2.129 in the cargo group ([#118](https://github.com/mdn/watify/issues/118)) ([575a930](https://github.com/mdn/watify/commit/575a9302907a913392530578a2738fac719aafae))
+* **deps:** bump wasm-bindgen in the cargo group ([575a930](https://github.com/mdn/watify/commit/575a9302907a913392530578a2738fac719aafae))
+* **deps:** bump wat from 1.259.0 to 1.261.0 in the cargo group ([#121](https://github.com/mdn/watify/issues/121)) ([c162ed2](https://github.com/mdn/watify/commit/c162ed2791ad6599be3c5a7f1ed55b0a21da6129))
+* **github:** use `.md` extension for PR template ([#120](https://github.com/mdn/watify/issues/120)) ([0e728f7](https://github.com/mdn/watify/commit/0e728f754437bab2aa92770f9a46bd6b28c4b38c))
+* rename `.github/PULL_REQUEST_TEMPLATE` to `.github/PULL_REQUEST_TEMPLATE.md` ([0e728f7](https://github.com/mdn/watify/commit/0e728f754437bab2aa92770f9a46bd6b28c4b38c))
+
 ## [1.1.11](https://github.com/mdn/watify/compare/v1.1.10...v1.1.11) (2026-09-16)
 
 
