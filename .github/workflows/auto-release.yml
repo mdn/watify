@@ -11,7 +11,7 @@ on:
         default: false
         type: boolean
 
-# No GITHUB_TOKEN permissions, as we don't use it.
+# GITHUB_TOKEN is unused (all calls use the mdn-bot PAT).
 permissions: {}
 
 jobs:
