@@ -38,7 +38,7 @@ jobs:
             exit 0
           fi
           number=$(jq -r '.number' <<< "$pr")
-          if ! jq -r '.body' <<< "$pr" | grep -Eq 'bump (wat|wasm-bindgen) from'; then
+          if ! jq -r '.body' <<< "$pr" | grep -Eq 'bump (wat|wasm-bindgen|the cargo group)\b'; then
             echo "::notice::Release PR #$number has no wat/wasm-bindgen bump, skipping."
             exit 0
           fi
